@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LinkConfig as NavItem } from "../../types";
-import { Logo } from "../../types/navigation";
+import { LogoType } from "../../types/navigation";
+import Logo from '../../public/Logo.png'
 
 const links: NavItem[] = [
     {
@@ -9,27 +10,31 @@ const links: NavItem[] = [
         link: '/'
     },
     {
-        label: 'About',
+        label: 'Sobre',
         link: '/about'
     },
     {
-        label: 'Projects',
+        label: 'Projetos',
         link: '/projects'
     },
     {
-        label: 'Contact',
+        label: 'Contato',
         link: '/contact'
     }
 ]
 
-const brandConfig: Logo = {
-    text: 'thiagond',
+const brandConfig: LogoType = {
     link: '/',
-    type: 'text'
-} as Logo;
+    type: 'image',
+    url: Logo
+} as LogoType;
 
 const renderBrand = brandConfig.type === 'image'
-    ? <Image src={brandConfig.url} alt='' />
+    ? (
+    <Link href={brandConfig.link}>
+        <Image src={brandConfig.url} className='size-15' alt='' />
+    </Link>    
+    )
     : (
         <h1>
             <Link href={brandConfig.link} className='font-bold text-lg'>{brandConfig.text}</Link>

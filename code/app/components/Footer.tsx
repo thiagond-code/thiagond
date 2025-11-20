@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { renderBrand, links } from "./utils/navigation"
-import { faEnvelope, faMap } from "@fortawesome/free-regular-svg-icons"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight, faGlobe } from "@fortawesome/free-solid-svg-icons"
 import { SocialMedia } from "./utils/socialMedia"
 
 const year = new Date().getFullYear()
@@ -19,23 +18,18 @@ const InfoDetails = () => {
     return (
         <div className='flex flex-col gap-4'>
             <span className='flex items-center gap-2'>
-                <FontAwesomeIcon icon={faEnvelope} className='size-6' />
                 <p className='hover:text-blue-400 transition delay-100 duration-600'>
-                    <a href='mailto:thiagond360@gmail.com' className='flex items-center gap-2'>
-                        thiagond360@gmail.com
-                        <FontAwesomeIcon icon={faArrowRight} className='size-4' />
+                    <a href='mailto:thiagond360@gmail.com' className='flex items-center gap-2 underline decoration-dotted'>
+                        thiagond360@gmail.com                    
                     </a>
                 </p>
+                <FontAwesomeIcon icon={faArrowRight} className='size-4.5'/>
             </span>
             <span className='flex items-center gap-2 pb-4'>
-                <FontAwesomeIcon icon={faMap} className='size-6' />
+                <FontAwesomeIcon icon={faGlobe} className='size-4.5' />
                 <p>
                     Governador Valadares, MG (BR)
                 </p>
-            </span>
-            <span className='flex flex-col gap-4'>
-                <h1 className='font-medium'>Languages</h1>
-                <p>🇧🇷 BR | 🇺🇸 US | 🇪🇸 ES</p>
             </span>
         </div>
     )
@@ -45,8 +39,8 @@ const FooterNavLinks = () => {
     return (
         <div>
             <div className='flex flex-col pb-4'>
-                <h1 className='font-medium pb-4 hidden sm:block'>Navigation</h1>
-                <ul className='flex sm:block justify-center'>
+                <h1 className='font-medium pb-4 hidden md:block'>Navigation</h1>
+                <ul className='flex md:block justify-center space-y-4'>
                     {footerLinkItems}
                 </ul>
             </div>
@@ -64,8 +58,8 @@ const TechStack = () => {
 
 export default function Footer() {
     return (
-        <footer className='flex flex-col gap-4'>
-            <section className='flex flex-col gap-8'>
+        <footer className='flex flex-col gap-8'>
+            <section className='md:grid grid-cols-2 flex flex-col gap-4 md:gap-0'>
                 <div className='flex flex-col gap-4'>
                     {renderBrand}
                     <InfoDetails />

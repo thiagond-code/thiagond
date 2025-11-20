@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${primaryFont.className} m-auto container p-4 text-neutral-600 space-y-8 max-w-4xl`}>
+      <body className={`${primaryFont.className} m-auto container p-4 text-neutral-600 space-y-8 max-w-5xl`}>
         <Navbar />
         <main>
           {children}

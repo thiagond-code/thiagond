@@ -1,25 +1,27 @@
 import { JSX } from "react"
-import { ImageConfig as Brand } from "./index"
+import { ImageConfig as Brand, RoutesConfig } from "./index"
 
-interface BrandWIT extends Omit<Brand, 'captions'> {
-    type: 'both'
-    text: string,
-    link: RouteName,
-}
-
-interface BrandWithImage extends Omit<Brand, 'captions'> {
-    type: 'image'
-}
-
-interface BrandWithText extends Omit<BrandWIT, 'url'> {
-    type: 'text'
-}
+type LogoType =
+  | {
+      type: 'image'
+      url: StaticImageData | string
+      link: RoutesConfig
+    }
+  | {
+      type: 'text'
+      text: string
+      link: RoutesConfig
+    }
+  | {
+      type: 'both'
+      text: string
+      url: StaticImageData | string
+      link: RoutesConfig
+    }
 
 interface SocialMediaIconsInterface {
     icon: JSX.Element
     link: string
 }
 
-export type Logo = BrandWIT | BrandWithImage | BrandWithText
-
-export { SocialMediaIconsInterface }
+export { SocialMediaIconsInterface, LogoType }

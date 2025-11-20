@@ -8,12 +8,12 @@ interface ButtonConfig extends ButtonInterface {
 
 const heroButtons: ButtonConfig[] = [
     {
-        label: 'View my projects',
+        label: 'Veja meus Projetos',
         link: '/projects',
         type: 'cta'
     },
     {
-        label: 'Contact me',
+        label: 'Bater um Papo',
         link: '/contact',
         type: 'sec'
     },
@@ -29,10 +29,13 @@ const heroButtonItems = heroButtons.map((button) => {
 
 const IntroDev = () => {
     return (
-        <div className='flex flex-col gap-4'>
-            <h2 className={`${description.className} text-xl font-medium`}>Hey, I&apos;m</h2>
-            <h1 className={`${devName.className} text-4xl font-bold`}>Thiago Nogueira</h1>
-            <p className={`${description.className}`}>CS Undergrad & Software Engineer Aspirant</p>
+        <div className='flex flex-col gap-6'>
+            <span className='hidden lg:block lg:text-7xl'>👋</span>
+            <h2 className={`${description.className} text-md font-medium`}>
+                Seja bem-vindo! Eu sou
+            </h2>
+            <h1 className={`${devName.className} text-4xl font-bold tracking-wide`}>Thiago Nogueira</h1>
+            <p className={`${description.className} text-lg`}>Um estudante de Ciências da Computação com visão de futuro</p>
         </div>
     )
 }

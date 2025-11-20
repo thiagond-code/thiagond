@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type RoutesConfig = '/' | '/about' | '/projects' | '/contact'
 
 export interface LinkConfig {
@@ -7,7 +9,7 @@ export interface LinkConfig {
 }
 
 export interface ImageConfig {
-    url: string;
+    url: StaticImageData | string;
     captions: string;
     link?: RoutesConfig
 }
