@@ -10,15 +10,15 @@ const links: NavItem[] = [
         link: '/'
     },
     {
-        label: 'Sobre',
+        label: 'About',
         link: '/about'
     },
     {
-        label: 'Projetos',
+        label: 'Projects',
         link: '/projects'
     },
     {
-        label: 'Contato',
+        label: 'Contact',
         link: '/contact'
     }
 ]
@@ -32,8 +32,8 @@ const brandConfig: LogoType = {
 const renderBrand = brandConfig.type === 'image'
     ? (
     <Link href={brandConfig.link}>
-        <Image src={brandConfig.url} className='size-15' alt='' />
-    </Link>    
+        <Image src={brandConfig.url} className='size-18' alt='' />
+    </Link>
     )
     : (
         <h1>

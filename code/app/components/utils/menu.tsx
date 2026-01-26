@@ -29,7 +29,7 @@ export default function HamburgerMenu() {
       <div>
         <DialogTrigger isOpen={isOpen} onOpenChange={setIsOpen}>
           <Button className="p-2 focus:outline-none">
-            <svg className="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg className="size-10 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </Button>
@@ -48,7 +48,7 @@ export default function HamburgerMenu() {
                     className="p-1 hover:bg-gray-100 rounded"
                     onPress={() => setIsOpen(false)}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 cursor-pointer">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                   </Button>
