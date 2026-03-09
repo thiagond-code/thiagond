@@ -16,10 +16,6 @@ const links: NavItem[] = [
     {
         label: 'Projects',
         link: '/projects'
-    },
-    {
-        label: 'Contact',
-        link: '/contact'
     }
 ]
 

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { primaryFont } from './fonts';
 import './globals.css';
+import BookCallPopup from './components/utils/bookCallPopup';
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang='pt-BR'>
       <body className={`${primaryFont.className} m-auto container p-4 text-neutral-600 space-y-8 max-w-5xl`}>
+        <BookCallPopup />
         <Navbar />
         <main>
           {children}
