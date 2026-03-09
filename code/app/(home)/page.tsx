@@ -4,12 +4,11 @@ import Thiago from '../public/thiago.webp'
 import Hero from "../components/Hero"
 import { Layout } from "../components/utils/layouts"
 
-
 export const metadata: Metadata = {
   title: 'Home'
 }
 
-export default function Home() {
+export default function Home() {    
   return (
     <>
       <Layout cols={2}>

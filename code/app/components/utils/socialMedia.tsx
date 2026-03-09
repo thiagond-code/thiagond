@@ -13,10 +13,6 @@ const positionLayout = {
 
 const socialMediaIcons: SocialMediaIconsInterface[] = [
     {
-        icon: <Icon icon={WhatsApp} className={`${iconStyle}`} />,
-        link: 'https://wa.me/5533988112363?text=Ol%C3%A1%21%20Vi%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20de%20est%C3%A1gio%20na%20%C3%A1rea%20de%20Tecnologia.%20Podemos%20conversar%3F'
-    },
-    {
         icon: <Icon icon={LinkedIn} className={`${iconStyle}`} />,
         link: 'https://linkedin.com/in/thiagond'
     },
